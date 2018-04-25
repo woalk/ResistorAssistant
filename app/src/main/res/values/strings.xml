@@ -1,0 +1,95 @@
+<!--
+  ~ Resistor Assistant - Resistance Calculator
+  ~ Copyright (C) 2018 Alexander Köster (Woalk Software)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Resistor Assistant</string>
+
+    <string name="menu_info">About Resistor Assistant&#8230;</string>
+    <string name="alert_info_title">Resistor Assistant v%1$s</string>
+    <string name="alert_info_message">
+        This is a bi-directional resistance calculator.
+        \n\n© 2018 Woalk Software
+        \nLicensed under GNU GPL v3.
+    </string>
+
+    <string name="title_assistant">Assistant</string>
+    <string name="title_colors">From colors</string>
+    <string name="title_number">From value</string>
+
+    <string name="color_1">Color 1:</string>
+    <string name="color_2">Color 2:</string>
+    <string name="color_3">Color 3:</string>
+    <string name="color_4">Color 4:</string>
+    <string name="color_5">Color 5:</string>
+    <string name="color_6">Color 6:</string>
+    <string name="color_none">- none -</string>
+    <string name="color_silver">Silver</string>
+    <string name="color_gold">Gold</string>
+    <string name="color_black">Black</string>
+    <string name="color_brown">Brown</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_violet">Violet</string>
+    <string name="color_gray">Gray</string>
+    <string name="color_white">White</string>
+    <string name="resistance_none">--- Ω</string>
+    <string name="resistance_format">%1$s</string>
+    <string name="resistance_tolerance_none" tools:ignore="TypographyDashes">± --.- %</string>
+    <string name="resistance_tolerance_format">± %1$.02f %%</string>
+    <string name="resistance_norm_none">---.-- Ω – ---.-- Ω</string>
+    <string name="resistance_norm_format">%1$.02f Ω – %2$.02f Ω</string>
+    <string name="resistance_info_none">Temperature coefficient: --- ppm/K (-)</string>
+    <string name="resistance_info_format">Temperature coefficient: %1$d ppm/K (%2$s)</string>
+    <string name="resistance_input_ohm">Ω</string>
+    <string name="resistance_input_hint">Input resistance</string>
+    <string name="colors_result_header">Result:</string>
+    <string name="colors_result_or">or</string>
+    <string name="colors_resistance_none">= --- Ω</string>
+    <string name="colors_resistance_format">= %1$sΩ</string>
+
+    <string name="message_input_hint">Ask Resistor Assistant</string>
+    <string name="message_unknown">Sorry, I don\'t know that.</string>
+    <string name="message_no_colors">There is no typical resistor with this value.</string>
+    <string name="description_voice">Voice input</string>
+    <string name="voice_recognition_listening">Listening&#8230;</string>
+    <string name="voice_recognition_no_answer">(not understood)</string>
+    <string name="alert_audio_permission_title">You can speak to Assistant.</string>
+    <string name="alert_audio_permission_message">
+        By giving Resistor Assistant your permission to use the microphone, you can just dictate the
+        color code of any resistor or an Ohm value to the Assistant by the press of a button, and it
+        will answer you with the respective conversion.
+    </string>
+    <string name="alert_audio_permission_later">Remind later</string>
+    <string name="alert_speech_unavailable_title">Unsupported device</string>
+    <string name="alert_speech_unavailable_message">
+        Sorry, but voice recognition is not available on your device.
+    </string>
+
+    <string name="voice_locale">en_US</string>
+    <string name="voice_answer_color">The resistor would have the colors: %1$s</string>
+    <string name="voice_answer_colors">
+        The resistor would either have the colors: %1$s.
+        Or it would have the colors: %2$s
+    </string>
+    <string name="voice_answer_no_color">@string/message_no_colors</string>
+    <string name="voice_answer_number">This resistor has a value of %1$s Ohm.</string>
+    <string name="voice_answer_unknown">@string/message_unknown</string>
+</resources>

@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="108dp"
+        android:height="108dp"
+        android:viewportWidth="1600"
+        android:viewportHeight="1600">
+    <group android:translateX="288"
+            android:translateY="288">
+        <path
+            android:fillColor="#fff"
+            android:name="resistor"
+            android:pathData="m192.4 619.5 427.1 -427.1c18.7 -18.7 49.1 -18.7 67.9 0l144.2 144.2c18.7 18.7 18.7 49.1 0 67.9l-427.1 427.1c-18.7 18.7 -49.1 18.7 -67.9 0l-144.2 -144.2c-18.7 -18.7 -18.7 -49.1 0 -67.9z" />
+        <path
+            android:fillColor="#964b00"
+            android:name="strip1"
+            android:pathData="m212.9 599 36.1 -36.1 212.1 212.1 -36.1 36.1 -212.1 -212.1z" />
+        <path
+            android:fillColor="#000"
+            android:name="strip2"
+            android:pathData="m283.6 528.3 36.1 -36.1 212.1 212.1 -36.1 36.1 -212.1 -212.1z" />
+        <path
+            android:fillColor="#ffa500"
+            android:name="strip3"
+            android:pathData="m354.3 457.6 36.1 -36.1 212.1 212.1 -36.1 36.1 -212.1 -212.1z" />
+        <path
+            android:fillColor="#9400d3"
+            android:name="stripM"
+            android:pathData="m425 386.8 36.1 -36.1 212.1 212.1 -36.1 36.1 -212.1 -212.1z" />
+        <path
+            android:fillColor="#9acd32"
+            android:name="stripT"
+            android:pathData="m562.2 249.7 36.1 -36.1 212.1 212.1 -36.1 36.1 -212.1 -212.1z" />
+        <path
+            android:fillColor="#fff"
+            android:name="wire 1"
+            android:pathData="m-32.9 1039.9 289.9 -289.9 17 17 -289.9 289.9 -17 -17z" />
+        <path
+            android:fillColor="#fff"
+            android:name="wire 2"
+            android:pathData="m750 257 289.9 -289.9 17 17 -289.9 289.9 -17 -17z" />
+    </group>
+</vector>

@@ -1,0 +1,28 @@
+<!--
+  ~ Resistor Assistant - Resistance Calculator
+  ~ Copyright (C) 2018 Alexander Köster (Woalk Software)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#000"
+        android:name="Ω"
+        android:pathData="m15 13v-2c0 -1.49 -0.483 -3.247 -1 -4c-0.518 -0.753 -1.07 -1 -2 -1c-0.914 0 -1.478 0.247 -2 1c-0.522 0.753 -1 2.51 -1 4v2c0 1.001 0.502 2.529 0.708 3.046c0.206 0.517 0.936 1.816 1.292 1.954v3h-6v-3l2.834 0.018c-0.412 -0.374 -0.793 -0.8 -1.14 -1.276c-0.348 -0.476 -0.647 -0.989 -0.898 -1.538c-0.251 -0.549 -0.447 -1.133 -0.588 -1.752c-0.142 -0.618 -0.209 -0.792 -0.209 -1.452v-2c0 -1.099 0.166 -1.611 0.506 -2.531c0.34 -0.92 0.817 -1.711 1.431 -2.375c0.614 -0.663 1.35 -1.18 2.207 -1.551c0.857 -0.37 1.813 -0.544 2.856 -0.544c1.035 0 1.978 0.173 2.839 0.544c0.861 0.37 1.601 0.887 2.22 1.551c0.619 0.663 1.098 1.455 1.437 2.375c0.34 0.92 0.504 1.432 0.504 2.531v2c0 0.668 -0.066 0.845 -0.207 1.464c-0.142 0.619 -0.34 1.203 -0.594 1.752c-0.255 0.549 -0.554 1.06 -0.898 1.532c-0.344 0.472 -0.722 0.895 -1.134 1.27l2.833 -0.018v3h-6v-3c0.34 -0.147 1.109 -1.451 1.311 -1.972c0.202 -0.521 0.689 -2.035 0.689 -3.028z" />
+</vector>

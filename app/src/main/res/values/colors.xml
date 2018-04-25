@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Resistor Assistant - Resistance Calculator
+  ~ Copyright (C) 2018 Alexander Köster (Woalk Software)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <color name="primaryColor">#c62828</color>
+    <color name="primaryLightColor">#ff5f52</color>
+    <color name="primaryDarkColor">#8e0000</color>
+    <color name="secondaryColor">#795548</color>
+    <color name="secondaryLightColor">#a98274</color>
+    <color name="secondaryDarkColor">#4b2c20</color>
+    <color name="resistorColor">#dbcfab</color>
+
+    <color name="color_none">@color/resistorColor</color>
+    <color name="color_silver">#c0c0c0</color>
+    <color name="color_gold">#CFB53B</color>
+    <color name="color_black">@android:color/black</color>
+    <color name="color_brown">#964B00</color>
+    <color name="color_red">#f00</color>
+    <color name="color_orange">#FFA500</color>
+    <color name="color_yellow">#ff0</color>
+    <color name="color_green">#9ACD32</color>
+    <color name="color_blue">#6495ED</color>
+    <color name="color_violet">#9400D3</color>
+    <color name="color_gray">#a0a0a0</color>
+    <color name="color_white">@android:color/white</color>
+
+    <color name="assistantBackground">#ddd</color>
+    <color name="assistantQuestion">#e6e6e6</color>
+    <color name="assistantAnswer">@android:color/white</color>
+</resources>

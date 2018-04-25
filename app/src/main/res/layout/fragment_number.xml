@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Resistor Assistant - Resistance Calculator
+  ~ Copyright (C) 2018 Alexander Köster (Woalk Software)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumberFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/top_ribbon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:elevation="@dimen/top_ribbon_elevation"
+            android:paddingBottom="@dimen/normal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/normal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/resistance_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/resistance_input_hint"
+                android:inputType="numberDecimal"
+                android:maxLength="12"
+                android:textAppearance="?android:textAppearanceLarge"
+                app:layout_constraintEnd_toStartOf="@id/label_ohm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_ohm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resistance_input_ohm"
+                android:textAppearance="?android:textAppearanceLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/resistance_input"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/resistance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/colors_resistance_none"
+                android:textAppearance="@style/AppTheme.TextAppearance.ResultLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resistance_input" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/result_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/colors_result_header"
+            android:textAppearance="?android:textAppearanceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_ribbon" />
+
+        <com.woalk.apps.resistorassistant.ResistorView
+            android:id="@+id/resistor1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:layout_constraintEnd_toStartOf="@+id/result_or"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_header" />
+
+        <TextView
+            android:id="@+id/result_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/colors_result_or"
+            app:layout_constraintBottom_toBottomOf="@+id/resistor1"
+            app:layout_constraintEnd_toStartOf="@+id/resistor2"
+            app:layout_constraintStart_toEndOf="@+id/resistor1"
+            app:layout_constraintTop_toTopOf="@+id/resistor1" />
+
+        <com.woalk.apps.resistorassistant.ResistorView
+            android:id="@+id/resistor2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/result_or"
+            app:layout_constraintTop_toBottomOf="@+id/result_header" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,97 @@
+<!--
+  ~ Resistor Assistant - Resistance Calculator
+  ~ Copyright (C) 2018 Alexander Köster (Woalk Software)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Resistor Assistant</string>
+
+    <string name="menu_info">Über Resistor Assistant&#8230;</string>
+    <string name="alert_info_title">Resistor Assistant v%1$s</string>
+    <string name="alert_info_message">
+        Dies ist ein bidirektionaler Widerstandsrechner.
+        \n\n© 2018 Woalk Software
+        \nLizenziert unter GNU GPL v3.
+    </string>
+
+    <string name="title_assistant">Assistent</string>
+    <string name="title_colors">Per Farben</string>
+    <string name="title_number">Per Wert</string>
+
+    <string name="color_1">Farbe 1:</string>
+    <string name="color_2">Farbe 2:</string>
+    <string name="color_3">Farbe 3:</string>
+    <string name="color_4">Farbe 4:</string>
+    <string name="color_5">Farbe 5:</string>
+    <string name="color_6">Farbe 6:</string>
+    <string name="color_none">- keine -</string>
+    <string name="color_silver">Silber</string>
+    <string name="color_gold">Gold</string>
+    <string name="color_black">Schwarz</string>
+    <string name="color_brown">Braun</string>
+    <string name="color_red">Rot</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_yellow">Gelb</string>
+    <string name="color_green">Grün</string>
+    <string name="color_blue">Blau</string>
+    <string name="color_violet">Violett</string>
+    <string name="color_gray">Grau</string>
+    <string name="color_white">Weiß</string>
+    <string name="resistance_none">--- Ω</string>
+    <string name="resistance_format">%1$s</string>
+    <string name="resistance_tolerance_none" tools:ignore="TypographyDashes">± --.- %</string>
+    <string name="resistance_tolerance_format">± %1$.02f %%</string>
+    <string name="resistance_norm_none">---,-- Ω – ---,-- Ω</string>
+    <string name="resistance_norm_format">%1$.02f Ω – %2$.02f Ω</string>
+    <string name="resistance_info_none">Temperaturkoeffizient: --- ppm/K (-)</string>
+    <string name="resistance_info_format">Temperaturkoeffizient: %1$d ppm/K (%2$s)</string>
+    <string name="resistance_input_ohm">Ω</string>
+    <string name="resistance_input_hint">Widerstand eingeben</string>
+    <string name="colors_result_header">Ergebnis:</string>
+    <string name="colors_result_or">oder</string>
+    <string name="colors_resistance_none">= --- Ω</string>
+    <string name="colors_resistance_format">= %1$sΩ</string>
+
+    <string name="message_input_hint">Frage den Widerstands-Assistenten</string>
+    <string name="message_unknown">Das weiß ich leider nicht.</string>
+    <string name="message_no_colors">Es gibt keinen üblichen Widerstand dieser Größe.</string>
+    <string name="description_voice">Spracheingabe</string>
+    <string name="voice_recognition_listening">Ich höre zu&#8230;</string>
+    <string name="voice_recognition_no_answer">(nicht verstanden)</string>
+    <string name="alert_audio_permission_title">Du kannst mit dem Assistenten reden.</string>
+    <string name="alert_audio_permission_message">
+        Wenn du Resistor Assistant die Berechtigung erteilst, dein Mikrofon zu verwenden, kannst du
+        auf Knopfdruck dem Assistenten den Farbcode eines Widerstands oder einen Ohm-Wert diktieren,
+        und der Assistent wird dir mit der jeweiligen Umwandlung antworten.
+    </string>
+    <string name="alert_audio_permission_later">Später erinnern</string>
+    <string name="alert_speech_unavailable_title">Nicht unterstütztes Gerät</string>
+    <string name="alert_speech_unavailable_message">
+        Es tut uns leid, aber für dieses Gerät ist leider keine Spracheingabe verfügbar.
+    </string>
+
+    <string name="voice_locale">de_DE</string>
+    <string name="voice_answer_color">Dieser Widerstand hätte die Farben: %1$s</string>
+    <string name="voice_answer_colors">
+        Dieser Widerstand hätte die Farben: %1$s.
+        Oder er hätte die Farben: %2$s
+    </string>
+    <string name="voice_answer_no_color">@string/message_no_colors</string>
+    <string name="voice_answer_number">
+        Der Widerstand entspricht einem Wert von %1$s Ohm.
+    </string>
+    <string name="voice_answer_unknown">@string/message_unknown</string>
+</resources>
