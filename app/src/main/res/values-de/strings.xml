@@ -19,6 +19,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Resistor Assistant</string>
 
+    <string name="menu_settings">Einstellungen</string>
+    <string name="title_activity_settings">Einstellungen</string>
     <string name="menu_info">Über Resistor Assistant&#8230;</string>
     <string name="alert_info_title">Resistor Assistant v%1$s</string>
     <string name="alert_info_message">
@@ -94,4 +96,32 @@
         Der Widerstand entspricht einem Wert von %1$s Ohm.
     </string>
     <string name="voice_answer_unknown">@string/message_unknown</string>
+
+    <!-- Settings -->
+    <string name="pref_category_assistant">Assistent</string>
+    <string name="pref_assistant_tts_title">Sprachausgabe</string>
+    <string name="pref_assistant_tts_message">
+        Wenn du Resistor Assistant per Spracheingabe eine Frage stellst, wird dir die Antwort
+        vorgelesen.
+    </string>
+    <string name="pref_category_info">Info</string>
+    <string name="pref_info_version_title">Resistor Assistant</string>
+    <string name="pref_info_version_message">
+        Version %1$s
+    </string>
+    <string name="pref_info_authors_title">Authors</string>
+    <string name="pref_info_authors_message">
+        &#169; Woalk Software
+        \nAlexander Köster
+    </string>
+    <string name="pref_info_repo_title">Fehlerberichte &amp; Quellcode</string>
+    <string name="pref_info_license_title">Lizenz</string>
+    <string name="pref_info_license_message">
+        GNU General Public License, Version 3
+    </string>
+    <string name="pref_info_build_date_title">Build-Datum</string>
+    <string name="pref_info_build_date_message">%1$s</string>
+    <string name="pref_info_build_date_long_message">%1$s auf %2$s</string>
+    <string name="pref_info_commit_title">Git-Commit</string>
+    <string name="pref_info_commit_message">%1$s auf %2$s</string>
 </resources>

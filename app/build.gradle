@@ -31,6 +31,10 @@ android {
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "DATE", '"' + getDate() + '"'
+        buildConfigField "String", "GIT_BRANCH", '"' + getGitBranch() + '"'
+        buildConfigField "String", "GIT_COMMIT", '"' + getGitCommit() + '"'
+        buildConfigField "String", "HOST", '"' + getBuildHost() + '"'
     }
     buildTypes {
         release {
@@ -41,6 +45,45 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+static def getDate() {
+    new Date().format("yyyy-MM-dd-HH-mmZ")
+}
+
+def getGitBranch() {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'symbolic-ref', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+def getGitCommit() {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+def getBuildHost() {
+    def stdout = new ByteArrayOutputStream()
+    if (org.gradle.internal.os.OperatingSystem.current().isWindows()) {
+        exec {
+            commandLine 'cmd', '/c', 'hostname'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim() + " Windows"
+    } else {
+        exec {
+            commandLine 'sh', '-c', 'echo "$(whoami)@$(hostname) $(uname)"'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
     }
 }
 

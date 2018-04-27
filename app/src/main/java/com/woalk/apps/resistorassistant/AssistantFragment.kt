@@ -38,6 +38,7 @@ import kotlinx.android.synthetic.main.fragment_assistant.*
 import android.speech.RecognizerIntent
 import android.content.Intent
 import android.os.Handler
+import android.preference.PreferenceManager
 import android.speech.tts.TextToSpeech
 import java.util.*
 
@@ -47,6 +48,7 @@ class AssistantFragment : AbsCalculationsFragment(), SpeechRecognitionListener.R
     companion object {
         private const val PERMISSION_REQUEST_RECORD_AUDIO = 0
         private const val TTS_REQUEST_CHECK_CODE = 1
+        private const val PREF_ASSISTANT_TTS = "assistant_tts"
     }
 
     private var reqListener: RequestCalculationListener? = null
@@ -275,7 +277,8 @@ class AssistantFragment : AbsCalculationsFragment(), SpeechRecognitionListener.R
     }
 
     private fun speakResult(calc: Calculation) {
-        if (ttsReady) {
+        if (ttsReady && PreferenceManager.getDefaultSharedPreferences(context)
+                        .getBoolean(PREF_ASSISTANT_TTS, true)) {
             tts!!.language = Locale.forLanguageTag(getString(R.string.voice_locale))
             tts!!.speak(calc.getSpeechOutput(context!!), TextToSpeech.QUEUE_FLUSH, null,
                     ttsId++.toString())

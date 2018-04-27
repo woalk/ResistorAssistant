@@ -19,6 +19,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Resistor Assistant</string>
 
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
     <string name="menu_info">About Resistor Assistant&#8230;</string>
     <string name="alert_info_title">Resistor Assistant v%1$s</string>
     <string name="alert_info_message">
@@ -92,4 +94,35 @@
     <string name="voice_answer_no_color">@string/message_no_colors</string>
     <string name="voice_answer_number">This resistor has a value of %1$s Ohm.</string>
     <string name="voice_answer_unknown">@string/message_unknown</string>
+
+    <!-- Settings -->
+    <string name="pref_category_assistant">Assistant</string>
+    <string name="pref_assistant_tts_title">Speech output</string>
+    <string name="pref_assistant_tts_message">
+        If you ask Resistor Assistant something via voice input, it will respond reading out the
+        answer.
+    </string>
+    <string name="pref_category_info">Info</string>
+    <string name="pref_info_version_title">Resistor Assistant</string>
+    <string name="pref_info_version_message">
+        Version %1$s
+    </string>
+    <string name="pref_info_authors_title">Authors</string>
+    <string name="pref_info_authors_message">
+        &#169; Woalk Software
+        \nAlexander Köster
+    </string>
+    <string name="pref_info_repo_title">Bug reports &amp; source code</string>
+    <string name="pref_info_repo_message" translatable="false">
+        https://github.com/woalk/ResistorAssistant
+    </string>
+    <string name="pref_info_license_title">License</string>
+    <string name="pref_info_license_message">
+        GNU General Public License, Version 3
+    </string>
+    <string name="pref_info_build_date_title">Build date</string>
+    <string name="pref_info_build_date_message">%1$s</string>
+    <string name="pref_info_build_date_long_message">%1$s on %2$s</string>
+    <string name="pref_info_commit_title">Git commit</string>
+    <string name="pref_info_commit_message">%1$s on %2$s</string>
 </resources>

@@ -19,6 +19,7 @@
 package com.woalk.apps.resistorassistant
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -118,6 +119,10 @@ class MainActivity : AppCompatActivity(), AbsCalculationsFragment.OnCalculationL
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            R.id.menu_settings -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+            }
             R.id.menu_info -> {
                 val alertDialog = AlertDialog.Builder(this)
                         .setTitle(getString(R.string.alert_info_title, BuildConfig.VERSION_NAME))
