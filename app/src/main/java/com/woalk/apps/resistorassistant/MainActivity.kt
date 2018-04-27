@@ -123,15 +123,6 @@ class MainActivity : AppCompatActivity(), AbsCalculationsFragment.OnCalculationL
                 val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
             }
-            R.id.menu_info -> {
-                val alertDialog = AlertDialog.Builder(this)
-                        .setTitle(getString(R.string.alert_info_title, BuildConfig.VERSION_NAME))
-                        .setMessage(R.string.alert_info_message)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .show()
-                val msgTxt: TextView? = alertDialog.findViewById(android.R.id.message)
-                msgTxt?.movementMethod = LinkMovementMethod.getInstance()
-            }
         }
         return super.onOptionsItemSelected(item)
     }
