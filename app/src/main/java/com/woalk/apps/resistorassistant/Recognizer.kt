@@ -23,6 +23,10 @@ import java.util.*
 
 class Recognizer(private val context: Context) {
     fun recognize(text: String): Calculation? {
+        if (text.equals(context.getString(R.string.voice_ea_rainbow), true)) {
+            // ea (c:)soph d
+            return getRainbow()
+        }
         try {
             val textSplit = text.split(' ')
             if (textSplit.size in 2..3 && text.endsWith("Ohm", true)) {
@@ -84,5 +88,16 @@ class Recognizer(private val context: Context) {
             }
         }
         return null
+    }
+
+    private fun getRainbow(): Calculation {
+        val resistance = 23400000.0
+        val colors = listOf(Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.BLUE,
+                Color.VIOLET)
+        return CalculationCustom(context.getString(R.string.voice_ea_rainbow),
+                context.getString(R.string.voice_ea_rainbow_f),
+                ColorListPair(colors, emptyList()),
+                Resistance(resistance, Color.BLUE.tolerance!!, Color.VIOLET.temp),
+                false)
     }
 }

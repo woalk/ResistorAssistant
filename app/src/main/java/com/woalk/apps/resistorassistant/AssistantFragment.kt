@@ -373,20 +373,15 @@ class AssistantFragment : AbsCalculationsFragment(), SpeechRecognitionListener.R
                 TYPE_QUESTION_COLORS -> {
                     val h = holder as ViewHolderColors
                     h.resistor.applyColors(item.colors.first)
-                    val text = StringBuilder(item.colors.first.size * 2)
-                    for (color in item.colors.first) {
-                        text.append(holder.itemView.context.getString(color.string))
-                        text.append(' ')
-                    }
-                    h.text.text = text.toString()
+                    h.text.text = item.getColor1String(h.itemView.context)
                 }
                 TYPE_ANSWER_NUMBER -> {
                     val h = holder as ViewHolderNumber
-                    h.text.text = item.resistance.humanReadable
+                    h.text.text = item.getResistanceString()
                 }
                 TYPE_QUESTION_NUMBER -> {
                     val h = holder as ViewHolderNumber
-                    h.text.text = item.resistance.humanReadable
+                    h.text.text = item.getResistanceString()
                 }
                 TYPE_ANSWER_COLORS -> {
                     val h = holder as ViewHolderColors2
@@ -412,7 +407,7 @@ class AssistantFragment : AbsCalculationsFragment(), SpeechRecognitionListener.R
                 }
                 TYPE_QUESTION_UNKNOWN -> {
                     val h = holder as ViewHolderNumber
-                    h.text.text = (item as CalculationUnknown).question
+                    h.text.text = item.getResistanceString()
                 }
                 TYPE_ANSWER_UNKNOWN -> {
                     val h = holder as ViewHolderNumber

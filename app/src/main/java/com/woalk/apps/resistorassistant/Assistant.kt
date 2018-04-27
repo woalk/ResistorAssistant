@@ -25,7 +25,7 @@ import java.util.*
 
 open class Calculation(val colors: ColorListPair, val resistance: Resistance,
                        val backwards: Boolean): Parcelable {
-    fun getColor1String(context: Context): String {
+    open fun getColor1String(context: Context): String {
         val text1 = StringBuilder(colors.first.size * 2)
         for (color in colors.first) {
             text1.append(context.getString(color.string))
@@ -34,13 +34,17 @@ open class Calculation(val colors: ColorListPair, val resistance: Resistance,
         return text1.toString()
     }
 
-    fun getColor2String(context: Context): String {
+    open fun getColor2String(context: Context): String {
         val text2 = StringBuilder(colors.second.size * 2)
         for (color in colors.second) {
             text2.append(context.getString(color.string))
             text2.append(' ')
         }
         return text2.toString()
+    }
+
+    open fun getResistanceString(): String {
+        return resistance.humanReadable
     }
 
     open fun getSpeechOutput(context: Context): String {
@@ -60,7 +64,7 @@ open class Calculation(val colors: ColorListPair, val resistance: Resistance,
         }
     }
 
-    private fun humanReadableSI(value: Double): String {
+    internal fun humanReadableSI(value: Double): String {
         when {
             // TODO i18n for "pico", "nano", ...
             value <= 0 -> return "%.00f ".format(Locale.getDefault(), value)
@@ -109,8 +113,40 @@ open class Calculation(val colors: ColorListPair, val resistance: Resistance,
     //endregion
 }
 
-class CalculationUnknown(val question: String): Calculation(ColorListPair(),
+class CalculationCustom(private val question: String, private val speechFormat: String? = null,
+                        colors: ColorListPair, resistance: Resistance, backwards: Boolean) :
+        Calculation(colors, resistance, backwards) {
+    override fun getColor1String(context: Context): String {
+        return if (!backwards) question else super.getColor1String(context)
+    }
+
+    override fun getColor2String(context: Context): String {
+        return if (!backwards) question else super.getColor2String(context)
+    }
+
+    override fun getResistanceString(): String {
+        return if (backwards) question else super.getResistanceString()
+    }
+
+    override fun getSpeechOutput(context: Context): String {
+        return if (speechFormat != null) {
+            if (!backwards) {
+                speechFormat.format(Locale.getDefault(), humanReadableSI(resistance.ohm))
+            } else {
+                speechFormat.format(Locale.getDefault(), getColor1String(context))
+            }
+        } else {
+            super.getSpeechOutput(context)
+        }
+    }
+}
+
+class CalculationUnknown(private val question: String): Calculation(ColorListPair(),
         Resistance(0.0, 0f, null), false), Parcelable {
+    override fun getResistanceString(): String {
+        return question
+    }
+
     override fun getSpeechOutput(context: Context): String {
         return context.getString(R.string.voice_answer_unknown)
     }

@@ -79,6 +79,8 @@
     </string>
 
     <string name="voice_locale">de_DE</string>
+    <string name="voice_ea_rainbow">Regenbogen</string>
+    <string name="voice_ea_rainbow_f">Der Regenbogen hätte einen Wert von %1$s Ohm.</string>
     <string name="voice_answer_color">Dieser Widerstand hätte die Farben: %1$s</string>
     <string name="voice_answer_colors">
         Dieser Widerstand hätte die Farben: %1$s.
